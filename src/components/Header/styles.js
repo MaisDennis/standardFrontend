@@ -1,61 +1,67 @@
 import styled from 'styled-components';
 export const Container = styled.div`
-  background: #fff;
-  padding: 0 30px;
-  box-shadow: 3px 3px 3px #fff;
-`;
-export const Content = styled.div `
-  height: 100px;
-  max-width: 900px;
-  margin: 0 auto;
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+  h1 {
+    color: #5a79ba;
+    font-family: 'Lobster', cursive;
+  }
+
+  .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+}
 
-  nav {
-    display: flex;
-    align-items: center;
-    img {
-      margin-right: 20px;
-      padding-right: 20px;
-      border-right: 1px solid #eee;
-      height: 100px;
-      width: auto;
+.youtube-logo {
+  height: 20px;
+}
 
-
-    }
-    a {
-      font-weight: bold;
-      color: #25415d;
-    }
-  }
-
- aside {
-      display: flex;
-      align-items: center;
-    }
-`;
-export const Profile = styled.div`
+.search-bar {
   display: flex;
-  margin-left: 20px;
-  padding-left: 20px;
-  border-left: 1px solid #eee;
-  div {
-    text-align: right;
-    margin-right: 10px;
-    strong {
-      display: block;
-      color: #333;
-    }
-    a {
-      display: block;
-      margin-top: 2px;
-      font-size: 12px;
-      color: #25415d;
-    }
-  }
-  img {
-    height: 32px;
-    border-radius: 50%;
-  }
+  flex-grow: 1;
+  margin: 0 2rem 0 4rem;
+}
+
+.search-input {
+  width: 100%;
+  font-size: inherit;
+  padding: .4em;
+  border: 1px solid #777;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  padding: 0 1.25rem;
+  border: 1px solid #777;
+  background-color: #F8F8F8;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #F0F0F0;
+}
+
+.menu-icons {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menu-channel-icon {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background-color: #AAA;
+}
 `;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Container = styled.div`
   *, *::before, *::after {
     box-sizing: border-box;
     font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -12,13 +12,33 @@ export const Wrapper = styled.div`
   margin: 0;
 }
 
+.title {
+  display: flex;
+  flex-direction: row;
+}
+
+.data {
+  display: flex;
+  flex-direction: row;
+}
+
+.videos:after {
+  content: "";
+  display: table;
+  clear: both;
+  height: 100px;
+}
+
 .video-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem 1rem;
-  padding: 1.5rem 0;
-  margin: 0 1.5rem;
-  border-top: 4px solid #CCC;
+  float: left;
+  width: 50%;
+  height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+}
+
+.video-section-section {
+  flex: 50%;
 }
 
 .video-section:first-child {
@@ -64,7 +84,7 @@ export const Wrapper = styled.div`
 }
 
 .thumbnail-title {
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   color: #606060;
   margin: 0 auto .3rem;
@@ -73,10 +93,10 @@ export const Wrapper = styled.div`
 }
 
 .thumbnail-image {
-  width: 98%;
+  width: 100%;
   height: 100%;
-  min-width: 150px;
-  min-height: 50px;
+  max-width: 100px;
+  max-height: 100px;
   background-color: #AAA;
   border-radius: .3em;
   margin: auto;
@@ -112,7 +132,7 @@ export const Wrapper = styled.div`
 
 .video-details {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 50%;
   border: 0.6px solid #606060;
   border-radius: .3rem;
@@ -226,4 +246,6 @@ export const Wrapper = styled.div`
   margin-right: 0;
 }
 `;
+
+
 

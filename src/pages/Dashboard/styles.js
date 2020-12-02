@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Container = styled.div`
   *, *::before, *::after {
     box-sizing: border-box;
     font-family: Roboto, Arial, Helvetica, sans-serif;
